@@ -30,10 +30,10 @@ export default {
         // ChatGPT Setting
         api_settings: {
             //url: 'https://api.openai.com/v1/chat/completions',
-            url: 'http://127.0.0.1:3000/chatgpt/',
-            model: 'gpt-3.5-turbo-0301',
-            api_token: 'sk-proj-5uSlpfb2X0bFymtKu1IfT3BlbkFJvaBrVBB39N0i2CncBTe9',
-            organization_id: 'org-ibB2LsNwrTtXfhGZ6BswtvtB',
+            url: 'http://localhost:3000/chatgpt/',
+            //model: 'gpt-3.5-turbo-0301',
+            //api_token: 'sk-proj-5uSlpfb2X0bFymtKu1IfT3BlbkFJvaBrVBB39N0i2CncBTe9',
+            //organization_id: 'org-ibB2LsNwrTtXfhGZ6BswtvtB',
         },
     }),
     methods: {
@@ -87,11 +87,13 @@ export default {
 
             // 發送請求給 ChatGPT API
             const response = await this.sendRequestToChatGPT(words);
+            print(response)
 
             // 取得 API 回應後，解析回應內容並取出回應訊息
             let message = '';
-            if(response.choices !== undefined && response.choices.length > 0) {
+            if(response.summary !== undefined && response.summary.length > 0) {
                 //message = response.choices[0].message.content;
+                print(response.summary)
                 message = response.summary
             }
             this.talk_contents.push({
