@@ -24,6 +24,7 @@ $ sudo apt install software-properties-common
 $ sudo add-apt-repository ppa:deadsnakes/ppa
 $ sudo apt install python3.9
 $ python3.9 --version
+3.9.19
 
 Get up and running with large language models locally. 
 install ollama (https://github.com/ollama/ollama)
@@ -32,25 +33,68 @@ $ curl -fsSL https://ollama.com/install.sh | sh
 Run ollama
 $ ollama run llama3
 
+[Ubuntu22.04]
+Totally new machine after install Ubuntu22.04
+instal Visual Studio Code after install, select from GUI
+Next,
+$ sudo apt install git
+$ mkdir git
+$ cd git
+$ git clone https://github.com/keithksleeitri/keithllmsrc.git
+$ sudo apt intall net-tools (for ifconfig command)
+$ sudo apt update
+$ sudo apt install openssh-server (https://reintech.io/blog/setting-up-sftp-server-ubuntu-22)
+$ sudo systemctl status ssh
+Put your open ai key in .env file for protection, if you want to use chatgpt API.
+$ python3 --version
+Python 3.10.12
+$ sudo apt update
+$ sudo apt upgrade
+$ sudo apt install curl
+
+Get up and running with large language models locally. 
+install ollama (https://github.com/ollama/ollama)
+$ curl -fsSL https://ollama.com/install.sh | sh
+
+Run ollama
+$ ollama run llama3
+
+$ sudo apt install python3-pip -y
+$ pip --version
+pip 22.0.2 (python 3.10)
+$ pip3 --version
+pip 22.0.2 (python 3.10)
+
 
 # How to reproduce your work
 You can get the up-to-date source code from git [keithksleeitri](git clone https://github.com/keithksleeitri/keithllmsrc.git)
 Please change to the directory keithllmsrc
 $ cd keithllmsrc
 You will find this README.md file in keithllm folder.
+[Ubuntu20.04]
 1. Execute fast api (uvicorn main:app --port 3000)
    1. $ cd keithllmfastapi
-   2. $ pip install --upgrade pip
-   3. $ pip3 install openai
-   4. $ pip3 install python-decouple
-   5. $ pip3 install fastapi
-   6. $ pip3 install click==8.0.1
-   7. $ pip3 install requests
-   8. $ pip3 install beautifulsoup4
-   9.  Put your open ai key in .env file for protection, if you want to use chatgpt API. 
-   10. $ sudo apt install uvicorn
+   2. Put your open ai key in .env file for protection, if you want to use chatgpt API.
+   3. $ pip install --upgrade pip
+   4. $ pip3 install openai
+   5. $ pip3 install python-decouple
+   6. $ pip3 install fastapi
+   7. $ pip3 install click==8.0.1
+   8. $ pip3 install requests
+   9. $ pip3 install bs4
+   10. $ sudo apt install uvicorn -y
    11. $ uvicorn main:app --port 3000
-
+[Ubuntu22.04]
+1. Execute fast api (uvicorn main:app --port 3000)
+   1. $ cd keithllmfastapi
+   2. Put your open ai key in .env file for protection, if you want to use chatgpt API.
+   3. $ pip install openai
+   4. $ pip install python-decouple
+   5. $ pip install fastapi
+   6. $ pip install bs4
+   7. $ sudo apt install uvicorn -y
+   8. $ uvicorn main:app --port 3000
+   
 2. Open browser [llmfrontend] (http://127.0.0.1:3000/docs)
 3. Execute llmchatgpt with transcription_target_url from [SayIt](https://sayit.pdis.nat.gov.tw/speeches)
    1. for example (https://sayit.pdis.nat.gov.tw/2024-01-04-商周一月專欄訪談唐鳳部長逐字稿)

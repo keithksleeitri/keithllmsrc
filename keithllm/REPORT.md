@@ -1,4 +1,7 @@
 # Why you implement like this and technical design?
+Explain use following LLM model to execute summary work: Chatgpt 3.5.turbo
+For popularity and response quickly of LLM, I select Chatgpt 3.5.turbo to execute summary work. 
+
 Simple is beauty. I like to implement step by step to reach the final goal as the following steps:
 Step1. Get webpage content from the given URL and show the result of original webpage contents, eg. getweb3.py
 Step2. Get webpage and show the parsing result from original webpage contents. Obtain the useful information for initial query strings, eg. getweb3.py
