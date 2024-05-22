@@ -111,6 +111,8 @@ Inference runtime for ollama llama3 are more than chatgpt 3.5.turbo to verify ex
 
 If website change, we need to chage different parsing methods. We can design different parsing methods using external configure files to solve different website content.  
 
+Fix bonus work cross sites problem. (https://stackoverflow.com/questions/65635346/how-can-i-enable-cors-in-fastapi)
+
 # Contributer
 The main contributer is Keith K.S. Lee keith.kslee@gmail.com
 
