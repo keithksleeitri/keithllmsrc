@@ -72,7 +72,7 @@ Please change to the directory keithllmsrc
 $ cd keithllmsrc
 You will find this README.md file in keithllm folder.
 [Ubuntu20.04]
-1. Execute fast api (uvicorn main:app --port 3000)
+1. Execute fast api (uvicorn main:app --reload --host 0.0.0.0 --port 3000)
    1. $ cd keithllmfastapi
    2. Put your open ai key in .env file for protection, if you want to use chatgpt API.
    3. $ pip install --upgrade pip
@@ -83,9 +83,9 @@ You will find this README.md file in keithllm folder.
    8. $ pip3 install requests
    9. $ pip3 install bs4
    10. $ sudo apt install uvicorn -y
-   11. $ uvicorn main:app --port 3000
+   11. $ uvicorn main:app --reload --host 0.0.0.0 --port 3000
 [Ubuntu22.04]
-1. Execute fast api (uvicorn main:app --port 3000)
+1. Execute fast api (uvicorn main:app --reload --host 0.0.0.0 --port 3000)
    1. $ cd keithllmfastapi
    2. Put your open ai key in .env file for protection, if you want to use chatgpt API.
    3. $ pip install openai
@@ -93,12 +93,22 @@ You will find this README.md file in keithllm folder.
    5. $ pip install fastapi
    6. $ pip install bs4
    7. $ sudo apt install uvicorn -y
-   8. $ uvicorn main:app --port 3000
+   8. $ uvicorn main:app --reload --host 0.0.0.0 --port 3000
    
 2. Open browser [llmfrontend] (http://127.0.0.1:3000/docs)
 3. Execute llmchatgpt with transcription_target_url from [SayIt](https://sayit.pdis.nat.gov.tw/speeches)
    1. for example (https://sayit.pdis.nat.gov.tw/2024-01-04-商周一月專欄訪談唐鳳部長逐字稿)
 4. Find the result from Response body on the browser
+
+# Bonus
+Run vue3 Frontend
+1. Execute Vue3 frontend
+>cd keithllmsummary
+>yarn serve
+2. Open browser [vuellmfrontend] (http://localhost:8080)
+3. Execute llmchatgpt with transcription_target_url from [SayIt](https://sayit.pdis.nat.gov.tw/speeches)
+   1. for example (https://sayit.pdis.nat.gov.tw/2024-01-04-商周一月專欄訪談唐鳳部長逐字稿)
+4. Find the result from Response body on the browser. [bonus](jpg/vue3_fastapi_llmchatgpt.png)
 
 # Anything can help other understanding your work
 References:
