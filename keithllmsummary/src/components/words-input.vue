@@ -4,7 +4,7 @@
             <input
                 type="text"
                 class="form-control"
-                placeholder="請輸入您想總結的網址"
+                placeholder="請輸入您想總結的網址(預設:https://sayit.pdis.nat.gov.tw/2024-01-04-商周一月專欄訪談唐鳳部長逐字稿)"
                 v-model="value"
             />
         </div>

@@ -108,7 +108,8 @@ Run vue3 Frontend
 2. Open browser [vuellmfrontend] (http://localhost:8080)
 3. Execute llmchatgpt with transcription_target_url from [SayIt](https://sayit.pdis.nat.gov.tw/speeches)
    1. for example (https://sayit.pdis.nat.gov.tw/2024-01-04-商周一月專欄訪談唐鳳部長逐字稿)
-4. Find the result from Response body on the browser. [bonus](jpg/vue3_fastapi_llmchatgpt.png)
+4. Find the result from Response body on the browser. [bonus](jpg/vue3_fastapi_chatgpt.png)
+   [bonus](jpg/vue3_fastapi_llmchatgpt_ollama.png) [bonus](jpg/vue3_fastapi_llmchatgpt_ollama_withdefaultvalue.png) 
 
 # Anything can help other understanding your work
 References:

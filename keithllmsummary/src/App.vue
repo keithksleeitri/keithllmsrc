@@ -30,7 +30,10 @@ export default {
         // ChatGPT Setting
         api_settings: {
             //url: 'https://api.openai.com/v1/chat/completions',
+            // Using the follow url to call fastapi chatgpt, you need provide OpenAI key in backend .env file
             url: 'http://localhost:3000/chatgpt/',
+            // Using the follow url to call fastapi llmchatgpt, you need run 'ollama run llama3' in backend
+            //url: 'http://localhost:3000/llmchatgpt/',
             //model: 'gpt-3.5-turbo-0301',
             //api_token: 'sk-proj-5uSlpfb2X0bFymtKu1IfT3BlbkFJvaBrVBB39N0i2CncBTe9',
             //organization_id: 'org-ibB2LsNwrTtXfhGZ6BswtvtB',
@@ -72,6 +75,10 @@ export default {
         // 送出
         async send() {
 
+            // if no input, system sent default url for user 
+            if (this.words == "") {
+                this.words = "https://sayit.pdis.nat.gov.tw/2024-01-04-商周一月專欄訪談唐鳳部長逐字稿"
+            }
             // 送出後須鎖定送出按鈕(避免重覆發送)
             this.is_wait_chatgpt_response = true;
 
