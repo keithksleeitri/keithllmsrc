@@ -65,6 +65,36 @@ pip 22.0.2 (python 3.10)
 $ pip3 --version
 pip 22.0.2 (python 3.10)
 
+Setup Vue3 yarn to mange JavaScript runtime envrionments (https://linuxgenie.net/how-to-install-yarn-on-ubuntu-22-04/)
+$ sudo apt update
+$ curl --version
+$ sudo apt install curl (if necessary)
+$ curl -sL https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add - (Importing Yarn GPD Key)
+$ echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+$ sudo apt install yarn -y
+$ sudo yarn --version
+$ sudo atp install npm -y
+$ sudo curl --compressed -o- -L https://yarnpkg.com/install.sh | bash 
+Successfully install Yarn 1.22.19!
+Next, install Vue.js on Ubuntu 22.04 (https://www.linuxtuto.com/how-to-install-vue-js-on-ubuntu-22-04/)
+$ sudo apt update && sudo apt upgrade -y
+$ sudo curl -sL https://deb.nodesource.com/setup_18.x | sudo bash - (Note that 'sudo' after pipeline is necessary for authority)
+$ sudo apt remove nodejs -y
+$ sudo apt autoremove
+$ sudo apt install nodejs -y
+$ node --version
+v18.20.3
+$ sudo np install npm@latest -g
+$ npm --version
+10.8.0
+$ sudo npm install -g @vue/cli
+$ vue --version
+@vue/cli 5.0.8
+
+install Docker on Ubuntu 22.04
+$ sudo apt install docker.io
+$ docker -v
+$ sudo docker ps
 
 # How to reproduce your work
 You can get the up-to-date source code from git [keithksleeitri](git clone https://github.com/keithksleeitri/keithllmsrc.git)
@@ -108,8 +138,14 @@ Run vue3 Frontend
 2. Open browser [vuellmfrontend] (http://localhost:8080)
 3. Execute llmchatgpt with transcription_target_url from [SayIt](https://sayit.pdis.nat.gov.tw/speeches)
    1. for example (https://sayit.pdis.nat.gov.tw/2024-01-04-商周一月專欄訪談唐鳳部長逐字稿)
-4. Find the result from Response body on the browser. [bonus](jpg/vue3_fastapi_chatgpt.png)
-   [bonus](jpg/vue3_fastapi_llmchatgpt_ollama.png) [bonus](jpg/vue3_fastapi_llmchatgpt_ollama_withdefaultvalue.png) 
+4. Find the result from Response body on the browser. [bonus](jpg/vue3_fastapi_chatgpt.png), Apply another fastapi llmchatgpt, using the follow url (url: 'http://localhost:3000/llmchatgpt/') to call fastapi llmchatgpt, you need run 'ollama run llama3' in backend
+   [bonus](jpg/vue3_fastapi_llmchatgpt_ollama.png) If no input, system sent default url for user. [bonus](jpg/vue3_fastapi_llmchatgpt_ollama_withdefaultvalue.png) 
+
+Run vue3 Frontend on Ubuntu22.04
+>cd keithllmsummary
+>rm yarn.lock
+>npm install
+>npm run serve
 
 # Anything can help other understanding your work
 References:
