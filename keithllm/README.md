@@ -96,14 +96,19 @@ $ sudo apt install docker.io
 $ docker -v
 $ sudo docker ps
 
-docker build
-C:keithllmfastapi>docker build -t keithllmfastapi .
-C:keithllmfastapi>docker run --name keithllmbackend keithllmfastapi 
-C:keithllmfastapi>docker stop keithllmbackend
-C:keithllmfastapi>docker rm keithllmbackend
-C:keithllmfastapi>docker image rm keithllmfastapi
-C:keithllmfastapi>docker run --name keithllmbackend -p 3000:3000 keithllmfastapi
-
+docker build on windows 11
+1. C:keithllmfastapi>docker build -t keithllmfastapi .
+2. C:keithllmfastapi>docker run --name keithllmbackend -p 3000:3000 keithllmfastapi 
+The following command for docker maintain   
+3. C:keithllmfastapi>docker stop keithllmbackend
+4. C:keithllmfastapi>docker rm keithllmbackend
+5. C:keithllmfastapi>docker image rm keithllmfastapi
+docker build on Ubuntu 22.04
+   1. $ cd keithllmfastapi
+   2. Put your open ai key in .env file for protection, if you want to use chatgpt API.
+   3. $ sudo docker build -t keithllmfastapi .
+   4. $ sudo docker run --name keithllmbackend -p 3000:3000 keithllmfastapi
+   
 # How to reproduce your work
 You can get the up-to-date source code from git [keithksleeitri](git clone https://github.com/keithksleeitri/keithllmsrc.git)
 Please change to the directory keithllmsrc
@@ -132,12 +137,12 @@ You will find this README.md file in keithllm folder.
    6. $ pip install bs4
    7. $ sudo apt install uvicorn -y
    8. $ uvicorn main:app --reload --host 0.0.0.0 --port 3000
-[Docker on Ubuntu20.04 or Ubuntu22.04 or windows11]
+[Docker on Ubuntu20.04 or Ubuntu22.04]
 1. Execute fast api (uvicorn main:app --reload --host 0.0.0.0 --port 3000)
    1. $ cd keithllmfastapi
    2. Put your open ai key in .env file for protection, if you want to use chatgpt API.
-   3. $ docker build -t keithllmfastapi .
-   4. $ docker run --name keithllmbackend -p 3000:3000 keithllmfastapi
+   3. $ sudo docker build -t keithllmfastapi .
+   4. $ sudo docker run --name keithllmbackend -p 3000:3000 keithllmfastapi
    
 2. Open browser [llmfrontend] (http://127.0.0.1:3000/docs)
 3. Execute llmchatgpt with transcription_target_url from [SayIt](https://sayit.pdis.nat.gov.tw/speeches)
