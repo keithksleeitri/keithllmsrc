@@ -8,7 +8,7 @@ Setup compiler environment: install fastapi for running on Windows 11 and Ubuntu
 Local inference ollama installation: install ollama on Windows 11 and Ubuntu 20.04 
 (https://github.com/ollama/ollama)
 
-[Ubuntu20.04]
+[Ubuntu20.04] (Need upgrade python to 3.9+)
 install visual studio code on Ubuntu 20.04 (https://linuxize.com/post/how-to-install-visual-studio-code-on-ubuntu-20-04/)
 $ sudo apt update
 $ sudo apt install software-properties-common apt-transport-https wget
@@ -33,7 +33,7 @@ $ curl -fsSL https://ollama.com/install.sh | sh
 Run ollama
 $ ollama run llama3
 
-[Ubuntu22.04]
+[Ubuntu22.04] (Prefer)
 Totally new machine after install Ubuntu22.04
 instal Visual Studio Code after install, select from GUI
 Next,
@@ -97,6 +97,7 @@ $ docker -v
 $ sudo docker ps
 
 docker build on windows 11
+Put your open ai key in .env file for protection, if you want to use chatgpt API.
 1. C:keithllmfastapi>docker build -t keithllmfastapi .
 2. C:keithllmfastapi>docker run --name keithllmbackend -p 3000:3000 keithllmfastapi 
 The following command for docker maintain   
@@ -104,10 +105,10 @@ The following command for docker maintain
 4. C:keithllmfastapi>docker rm keithllmbackend
 5. C:keithllmfastapi>docker image rm keithllmfastapi
 docker build on Ubuntu 22.04
-   1. $ cd keithllmfastapi
-   2. Put your open ai key in .env file for protection, if you want to use chatgpt API.
-   3. $ sudo docker build -t keithllmfastapi .
-   4. $ sudo docker run --name keithllmbackend -p 3000:3000 keithllmfastapi
+Put your open ai key in .env file for protection, if you want to use chatgpt API.
+1. $ cd keithllmfastapi
+2. $ sudo docker build -t keithllmfastapi .
+3. $ sudo docker run --name keithllmbackend -p 3000:3000 keithllmfastapi
    
 # How to reproduce your work
 You can get the up-to-date source code from git [keithksleeitri](git clone https://github.com/keithksleeitri/keithllmsrc.git)
@@ -137,7 +138,7 @@ You will find this README.md file in keithllm folder.
    6. $ pip install bs4
    7. $ sudo apt install uvicorn -y
    8. $ uvicorn main:app --reload --host 0.0.0.0 --port 3000
-[Docker on Ubuntu20.04 or Ubuntu22.04]
+[Docker on Ubuntu20.04 or Ubuntu22.04, only provide chatgpt API, please use it with keithllmsummary vue3 frontend]
 1. Execute fast api (uvicorn main:app --reload --host 0.0.0.0 --port 3000)
    1. $ cd keithllmfastapi
    2. Put your open ai key in .env file for protection, if you want to use chatgpt API.
