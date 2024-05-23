@@ -166,6 +166,11 @@ Run vue3 Frontend on Ubuntu22.04
 >npm install
 >npm run serve
 
+Run vue3 Frontend on Ubuntu22.04
+>cd keithllmollama
+>yarn install
+>yarn serve
+
 # Anything can help other understanding your work
 References:
 1. Vue.js from entry to practice, ISBN 978-726-324-476-4, EL0258, 2023-06, [GOTOP](https://www.gotop.com.tw)
