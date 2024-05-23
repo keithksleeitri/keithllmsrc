@@ -1,0 +1,9 @@
+
+# Created by Keith K.S. Lee 
+
+### FastAPI ###
+.env
+
+### FastAPI.Python Stack ###
+# Byte-compiled
+__pycache__/
